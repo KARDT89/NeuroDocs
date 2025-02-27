@@ -9,7 +9,6 @@ import {
 import Logo from "./Logo";
 import { ModeToggle } from "@/components/ModeToggle";
 import { Button } from "@/components/ui/button";
-import { RainbowButton } from "@/components/magicui/rainbow-button";
 
 const Navbar = () => {
   return (

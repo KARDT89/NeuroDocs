@@ -1,23 +1,21 @@
-import { auth } from "@clerk/nextjs/server";
-import React from "react";
+"use client";
+
+import { useAuth } from "@clerk/nextjs";
 import IntroPage from "./IntroPage";
+import NewDocument from "./new-document";
 
-const Dashboard = () => {
-    const {userId} = auth()
+export default function Dashboard() {
+  const { userId } = useAuth(); // Works in a client component
 
-    if(!userId){
-        return <IntroPage/>
-    }
-    else{
-        
-    }
+  if (!userId) {
+    return <IntroPage />;
+  }
+
   return (
     <div>
       {/* new document */}
-
+      <NewDocument/>
       {/* recent document */}
     </div>
   );
-};
-
-export default Dashboard;
+}
