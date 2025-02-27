@@ -16,7 +16,6 @@ const Navbar = () => {
     <div className="my-2 mx-4 flex justify-between items-center py-2 ">
       {/* Logo */}
       <Logo />
-
       {/* Auth */}
       <div className="flex items-center gap-3 justify-center">
         <div className="flex items-center justify-center">
