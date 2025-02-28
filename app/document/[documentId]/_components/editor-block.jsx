@@ -22,6 +22,7 @@ import Editor from "@/components/Editor";
 import axios from "axios";
 import { revalidatePath } from "next/cache";
 import { toast } from "react-toastify";
+import DrawerAi from "./drawer-ai";
 
 const FormSchema = z.object({
   title: z.string().min(2).max(50),
@@ -76,7 +77,8 @@ const EditorBlock = ({ document }) => {
   return (
     <div className="px-4">
       <div className="flex float-right my-2 space-x-4">
-        {/* <DrawerAI description={document.description} /> */}
+        
+        <DrawerAi description={document.description}/>
         <form onSubmit={onDocumentDelete} className="flex float-right">
           <Button type="submit" variant="destructive">
             Delete

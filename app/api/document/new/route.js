@@ -12,12 +12,12 @@ export async function POST(req) {
     if (!user) {
       return new NextResponse("User Not Autheticated", { status: 401 });
     }
-
+    const {title, description} = await req.json()
     const createNewDoc = await db.document.create({
       data: {
         userId: user.id,
-        title: "Untitled Document",
-        description: "",
+        title: title,
+        description: description,
       },
     });
     revalidatePath("/");
