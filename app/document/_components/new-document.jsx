@@ -7,11 +7,13 @@ import {
 } from "@/components/ui/card";
 import { Plus } from "lucide-react";
 import axios from "axios";
+import { revalidatePath } from "next/cache";
 
 const NewDocument = () => {
   const createNewDoc = async () => {
     try {
       const response = await axios.post("/api/document/new");
+      revalidatePath("/");
     } catch (error) {}
   };
 

@@ -14,8 +14,11 @@ const karla = Karla({ subsets: ["latin"], weight: "500" });
 const Logo = () => {
   return (
     <div className="flex gap-2 items-center text-xl font-bold">
+      <Link href={'/'} className="flex gap-2 items-center"> 
       <Brain className="h-6 w-6 text-primary" />
       <span>Neurodocs</span>
+    </Link>
+      
     </div>
   );
 };
